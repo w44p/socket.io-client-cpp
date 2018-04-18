@@ -1,0 +1,3 @@
+1、没有看到install.md文件，直接git clone下载代码库，没有下载lib下两个关联库。需要用这个命令下载：git clone --recurse-submodules XXXXXXXX
+2、下载后编译，两个依赖库有一个代码在VS2017编译提示错误，需要在关联库目录下用git pull origin master来更新代码。
+3、
