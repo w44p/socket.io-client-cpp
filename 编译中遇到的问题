@@ -4,3 +4,29 @@
 3、没有看到install.md文件，直接git clone下载代码库，没有下载lib下两个关联库。需要用这个命令下载：git clone --recurse-submodules XXXXXXXX
 4、下载后编译，两个依赖库有一个代码在VS2017编译提示错误，需要在关联库目录下用git pull origin master来更新代码。
 
+
+目前编译结果如下：
+1>------ 已启动全部重新生成: 项目: SioChatDemo, 配置: Debug Win32 ------
+1>main.cpp
+1>e:\code\test\socket.io-client-cpp\examples\console\main.cpp(87): warning C4244: “=”: 从“int64_t”转换到“int”，可能丢失数据
+1>e:\code\test\socket.io-client-cpp\examples\console\main.cpp(98): warning C4244: “=”: 从“int64_t”转换到“int”，可能丢失数据
+1>e:\code\test\socket.io-client-cpp\examples\console\main.cpp(131): warning C4244: “=”: 从“int64_t”转换到“int”，可能丢失数据
+1>sio_socket.cpp
+1>Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+1>sio_client.cpp
+1>Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+1>sio_packet.cpp
+1>Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+1>sio_client_impl.cpp
+1>Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+1>正在生成代码...
+1>sio_client_impl.obj : error LNK2019: 无法解析的外部符号 "class boost::system::error_category const & __cdecl boost::system::system_category(void)" (?system_category@system@boost@@YAABVerror_category@12@XZ)，该符号在函数 "public: __thiscall boost::system::error_code::error_code(void)" (??0error_code@system@boost@@QAE@XZ) 中被引用
+1>sio_client.obj : error LNK2001: 无法解析的外部符号 "class boost::system::error_category const & __cdecl boost::system::system_category(void)" (?system_category@system@boost@@YAABVerror_category@12@XZ)
+1>sio_socket.obj : error LNK2001: 无法解析的外部符号 "class boost::system::error_category const & __cdecl boost::system::system_category(void)" (?system_category@system@boost@@YAABVerror_category@12@XZ)
+1>sio_client_impl.obj : error LNK2019: 无法解析的外部符号 "class boost::system::error_category const & __cdecl boost::system::generic_category(void)" (?generic_category@system@boost@@YAABVerror_category@12@XZ)，该符号在函数 "public: virtual bool __thiscall boost::system::error_category::std_category::equivalent(class std::error_code const &,int)const " (?equivalent@std_category@error_category@system@boost@@UBE_NABVerror_code@std@@H@Z) 中被引用
+1>sio_client.obj : error LNK2001: 无法解析的外部符号 "class boost::system::error_category const & __cdecl boost::system::generic_category(void)" (?generic_category@system@boost@@YAABVerror_category@12@XZ)
+1>sio_socket.obj : error LNK2001: 无法解析的外部符号 "class boost::system::error_category const & __cdecl boost::system::generic_category(void)" (?generic_category@system@boost@@YAABVerror_category@12@XZ)
+1>E:\code\test\socket.io-client-cpp\examples\Console\SioChatDemo\Debug\SioChatDemo.exe : fatal error LNK1120: 2 个无法解析的外部命令
+1>已完成生成项目“SioChatDemo.vcxproj”的操作 - 失败。
+========== 全部重新生成: 成功 0 个，失败 1 个，跳过 0 个 ==========
+
