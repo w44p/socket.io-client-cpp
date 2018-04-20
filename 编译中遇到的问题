@@ -3,6 +3,10 @@
 
 3、没有看到install.md文件，直接git clone下载代码库，没有下载lib下两个关联库。需要用这个命令下载：git clone --recurse-submodules XXXXXXXX
 4、下载后编译，两个依赖库有一个代码在VS2017编译提示错误，需要在关联库目录下用git pull origin master来更新代码。
+5、编译时会有错误，需要去掉log后的{}
+编译报错如下：
+1>e:\code\socket.io-client-cpp\src\internal\sio_client_impl.cpp(282): error C3321: 此上下文中存在意外的初始值设定项列表
+1>e:\code\socket.io-client-cpp\src\internal\sio_client_impl.cpp(496): error C3321: 此上下文中存在意外的初始值设定项列表
 
 
 目前编译结果如下：
