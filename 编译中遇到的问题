@@ -1,11 +1,11 @@
 1、安装boost遇到bootstrap.bat不能执行成功，没有找到cl命令。后在在VS2017的本机工具命令行下执行成功。
 2、不知道作者把哪些lib打包成boost.lib了，目前编译总有“无法解析的外部符号”的错误。
-
+    在VS2017的兼容命令行中，用lib.exe /OUT:boost.lib *命令打包出boost.lib后，就没有这个错误了。？？？？？？？？
 3、没有看到install.md文件，直接git clone下载代码库，没有下载lib下两个关联库。需要用这个命令下载：git clone --recurse-submodules XXXXXXXX
 4、下载后编译，websocketpp依赖库有一个代码在VS2017编译提示错误，需要在关联库目录下用git pull origin master来更新代码。
 5、会有一个boost/bind.hpp找不到的报错，添加头文件的时候不能只添加到include，还要包含下一层。正确的如下：
   E:\code\boost_install\include\boost-1_67
-5、编译时会有错误，需要去掉log后的{}
+6、编译时会有错误，需要去掉log后的{}
 编译报错如下：
 1>e:\code\socket.io-client-cpp\src\internal\sio_client_impl.cpp(282): error C3321: 此上下文中存在意外的初始值设定项列表
 1>e:\code\socket.io-client-cpp\src\internal\sio_client_impl.cpp(496): error C3321: 此上下文中存在意外的初始值设定项列表
